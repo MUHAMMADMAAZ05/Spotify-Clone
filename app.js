@@ -27,16 +27,32 @@ songItems.forEach((element, i) => {
 
 // Play selected song
 function playSelectedSong() {
+    audioElement.pause();
     audioElement.src = songs[songIndex].filePath;
+    audioElement.load();
+
     masterSongName.innerHTML = songs[songIndex].songName;
     audioElement.currentTime = 0;
-    audioElement.play();
+
+    audioElement.play().catch((error) => {
+        console.log("Audio play error:", error);
+    });
 
     gif.style.opacity = 1;
-
     masterPlay.classList.remove('fa-circle-play');
     masterPlay.classList.add('fa-pause-circle');
 }
+// function playSelectedSong() {
+//     audioElement.src = songs[songIndex].filePath;
+//     masterSongName.innerHTML = songs[songIndex].songName;
+//     audioElement.currentTime = 0;
+//     audioElement.play();
+
+//     gif.style.opacity = 1;
+
+//     masterPlay.classList.remove('fa-circle-play');
+//     masterPlay.classList.add('fa-pause-circle');
+// }
 
 // Master Play/Pause
 masterPlay.addEventListener("click", () => {
