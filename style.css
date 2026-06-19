@@ -117,3 +117,105 @@ nav ul li{
     width: 120px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+    body {
+        overflow: auto;
+    }
+
+    .container {
+        width: 90%;
+        min-height: 65vh;
+        margin: 18px auto;
+        padding: 18px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .songItem {
+        height: auto;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .songName {
+        width: 55%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .bottom {
+        height: 140px;
+    }
+
+    #myProgressBar {
+        width: 90vw;
+    }
+
+    .songInfo {
+        position: static;
+        margin-top: 8px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav ul {
+        height: 55px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        width: 38px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 14px;
+    }
+
+    .songList h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .songItem {
+        font-size: 12px;
+        border-radius: 14px;
+    }
+
+    .songItem img {
+        width: 26px;
+        margin: 0 8px;
+    }
+
+    .timestamp {
+        margin: 0 8px;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+
+    .icons i {
+        font-size: 24px;
+        margin: 0 8px;
+    }
+
+    .volume-control {
+        margin-top: 10px;
+    }
+
+    #volumeSlider {
+        width: 100px;
+    }
+
+    #masterSongName {
+        font-size: 13px;
+    }
+}
