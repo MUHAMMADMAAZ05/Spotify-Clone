@@ -66,6 +66,7 @@ nav ul li{
 }
 .icons i{
     cursor: pointer;
+    color: aqua;
 }
 .songItemContainer{
     margin-top: 34px;
@@ -103,4 +104,16 @@ nav ul li{
 .songInfo img{
     opacity: 0;
     transition: opacity 0.8s ease-in;
+}
+
+.volume-control {
+    position: absolute;
+    gap: 500px;
+    right: 9.5vw;
+    font-family: 'Varela Round','sans-serif';
+}
+
+#volumeSlider {
+    width: 120px;
+    cursor: pointer;
 }
